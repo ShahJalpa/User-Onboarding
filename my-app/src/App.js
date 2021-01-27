@@ -1,5 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
+//importing Form.js
+import Form from './component/Form'
 
 function App() {
   return (
