@@ -1,8 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
-//importing Form.js
-import Form from './component/Form'
+import Form from './component/Form' //importing Form.js
+import React, { useState } from 'react';
 
+//set the initial form values and form errors emptystrings
 const initialFormValues = {
   name: "",
   email: "",
@@ -16,23 +17,26 @@ const initialFormErrors = {
   password: "",
 };
 
+//set initial users as an empty array and button disable true
+const initialUsers = [];
+const initialDisabled = true
+
+
 function App() {
+  //states
+  const [users, setUser] = useState(initialUsers);
+  const [formValues, setFormValues] = useState(initialFormValues);
+  const [formErrors, setFormError] = useState(initialFormErrors);
+  const [disabled, setDisabled] = useState(initialDisabled);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="container">
+      <header>
+        <h1>Users App</h1>
       </header>
+
+      <Form 
+        values={formValues}
+      />
     </div>
   );
 }
