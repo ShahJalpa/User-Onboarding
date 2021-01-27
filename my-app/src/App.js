@@ -3,6 +3,19 @@ import './App.css';
 //importing Form.js
 import Form from './component/Form'
 
+const initialFormValues = {
+  name: "",
+  email: "",
+  passowrd: "",
+  termsOfService: false,
+};
+
+const initialFormErrors = {
+  name: "",
+  email: "",
+  password: "",
+};
+
 function App() {
   return (
     <div className="App">
