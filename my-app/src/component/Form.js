@@ -10,8 +10,8 @@ export default function Form(props){
 
     const onChange = (event) => {
         const {name, value, type, checked} = event.target;
-        //const valueToTerms = type === "checkbox"? checked : errors;
-        change (name, value, type);
+        const valueToTerms = type === "checkbox"? checked : value;
+        change (name, valueToTerms);
     };
 
     return (
