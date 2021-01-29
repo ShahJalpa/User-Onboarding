@@ -31,5 +31,12 @@ describe("UsersForm app ", () => {
          .should("have.value", "")
          .type("jalpa")
          .should("have.value", "jalpa");
+    });
+
+    it('if a user can check the terms of service box', () => {
+        cy.get('form')
+          .find('[name="terms"]')
+          .check();
     })
+
 })
